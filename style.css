@@ -18,10 +18,12 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: x-large;
     font-weight: 500;
+
+    padding-inline: 30px;
 }
 
 .outline-button:hover {
-    margin: 1px;
+    transform: scale(101%);
 }
 
 .action-button {
@@ -45,7 +47,6 @@ body {
 }
 
 .action-button:active {
-    margin: 4px;
     transform: translate(4px, 4px);
     box-shadow: none;
 }
@@ -98,7 +99,8 @@ body {
 .complementary-card {
     background: #6291ff;
     width: 90%;
-    height: 200px;
+    height: max-content;
+    padding-block: 50px;
 
     border-radius: 10px;
     border: solid black 3px;
@@ -106,7 +108,6 @@ body {
 
 .complementary-card p {
     width: 90%;
-    height: 200px;
 
     font-size: xx-large;
     font-weight: 700;
@@ -122,9 +123,11 @@ body {
     border: 2px solid black;
     border-radius: 20px;
 
-    width: 18%;
+    width: fit-content;
+    padding-inline: 20px;
     margin-right: 30px;
-    height: 100px;
+    height: max-content;
+    padding-block: 20px;
 
     font-size: x-large;
     font-weight: 600;
@@ -149,6 +152,8 @@ body {
     font-family: 'Inter', sans-serif;
     border: 2px solid #000000;
     border-radius: 1px;
+    height: max-content;
+    padding-block: 22px;
 }
 
 /*#endregion*/
@@ -157,37 +162,28 @@ body {
 /*#region*/
 
 .home-page {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr;
-}
-
-
-.home-page h1 {
-    grid-row: 2 / 3;
-    grid-column: 1 / 3;
-    font-size: 5em;
-    
     display: flex;
-    align-items: center;
-
-    transform: translate(50px, -50px);
-    height: 450px;
+    flex-direction: column;
+    width: 100%;
 }
 
-.home-page h3 {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
+.home-section {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
 
-    transform: translate(50px);
-    font-size: xx-large;
-    width: max-content;
 
+.home-section h1 {
+    font-size: 5em;
+    padding: 40px;
+
+    width: 50%;
 }
 
 .three-d-house {
-    grid-row: 2 / 3;
-    grid-column: 3 / 6;
+    width: 50%;
+    height: 60vh;
 }
 
 model-viewer {
@@ -195,20 +191,24 @@ model-viewer {
     height: 100%;
 }
 
-.services-button {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
+.hero {
+    display: flex;
+    width: 100%;
+    height: max-content;
 }
 
-.about-button {
-    grid-row: 1 / 2;
-    grid-column: 4 / 5;
+.hero h3 {
+
+    transform: translate(50px);
+    font-size: xx-large;
+    width: max-content;
+
 }
 
-.book-call-button {
-    grid-row: 1 / 2;
-    grid-column: 5 / 6;
+.hero div {
+    flex: 1;
 }
+
 
 /*#endregion*/
 
@@ -219,12 +219,18 @@ model-viewer {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-top: 10px;
 }
 
-.services div {
+.services > div {
     display: flex;
     gap: 0px;
 
+}
+
+.services > button {
+    margin-top: 60px; padding-inline: 10px; padding-block: 30px; width: 40%; height: max-content;
 }
 
 .service {
@@ -233,7 +239,7 @@ model-viewer {
     align-items: center;
 
     height: 500px;
-    width: 100%;
+    width: 80%;
 
     padding-inline: 35px;
 }
@@ -305,13 +311,15 @@ model-viewer {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 40px;
+
+    gap: 10px;
+    
 }
 
 .general-contact {
     display: flex;
-
-    height: 400px;
-    gap: 20px;
+    align-items: stretch;
+    height: fit-content;
 }
 
 .general-contact > div {
@@ -320,7 +328,8 @@ model-viewer {
     align-items: center;
 
     gap: 40px;
-    width: 120%;
+    flex: 1;
+    padding-right: 50px;
 }
 
 .general-contact > div > button {
@@ -330,13 +339,54 @@ model-viewer {
 
 .general-contact > div > input {
     width: 60%;
-    height: 25%;
     font-size: x-large;
 }
 
-.general-contact p {
-    padding: 35px;
+.general-contact > p {
+    padding-left: 40px;
     font-size: 2.5rem;
+    width: 45%;
 }
 
 /*#endregion*/
+
+@media only screen and (max-width: 641px) {
+    .services > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services > button {
+        padding-block: 30px; width: 85%; height: max-content;
+    }
+
+    .three-d-house {
+        display: none;
+    }
+
+    .home-section h1 {
+        width: 100%;
+        font-size: 3.5em;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .propchk {
+        flex-direction: column;
+    }
+} 
+
+@media only screen and (max-width: 1150px) {
+    
+    .general-contact > p {
+        width: fit-content;
+        padding-right: 25px;
+    }
+
+    .general-contact {
+        flex-direction: column;
+    }
+} 
