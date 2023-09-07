@@ -360,6 +360,16 @@ model-viewer {
         padding-block: 30px; width: 85%; height: max-content;
     }
 
+    .hero h3 {
+        font-size: 1.4em;
+        width: 30%;
+    }
+
+    .book-call-button {
+        width: 40%;
+        height: max-content;
+    }
+
     .three-d-house {
         display: none;
     }
@@ -377,6 +387,18 @@ model-viewer {
     .propchk {
         flex-direction: column;
     }
+
+    .general-contact > div > button {
+        width: fit-content;
+        font-size: x-large;
+        margin-left: 40px;
+    }
+    
+    .general-contact > div > input {
+        margin-left: 40px;
+        width: fit-content;
+        font-size: x-large;
+    }
 } 
 
 @media (max-width: 1150px) {
@@ -388,5 +410,15 @@ model-viewer {
 
     .general-contact {
         flex-direction: column;
+    }
+} 
+
+@media (max-width: 995px) {
+    .services-button {
+        display: none;
+    }
+
+    .about-button {
+        display: none;
     }
 } 
