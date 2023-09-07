@@ -76,7 +76,9 @@ body {
 
 .service-card div img {
     border-radius: 1px;
-    border: solid black 1px;
+    border: solid #000000 2px;
+
+    border-radius: 10px;
 }
 
 .service-card p {
@@ -337,12 +339,4 @@ model-viewer {
     font-size: 2.5rem;
 }
 
-.general-contact button 
-
 /*#endregion*/
-
-.bottom-bar {
-    height: fit-content;
-    margin-bottom: 20;
-    background: black;
-}
