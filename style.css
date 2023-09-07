@@ -278,7 +278,7 @@ model-viewer {
 }
 
 .about-us > p {
-    font-size: 1.5rem;
+    font-size: x-large;
     padding-inline: 75px;
     font-weight: 500;
     text-align: center;
@@ -344,30 +344,71 @@ model-viewer {
 
 .general-contact > p {
     padding-left: 40px;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     width: 45%;
 }
 
 /*#endregion*/
 
-@media (max-width: 641px) {
+@media (max-aspect-ratio: 768/835) {
+
+    .section-heading{
+        font-size: 5em;
+    }
+
+    .service-card {
+        height: max-content;
+    }
+
+    .service-card > h5 {
+        height: max-content;
+        font-size: 3em;
+    }
+
+    .service-card > p {
+        font-size: 1.7em;
+    }
+
+    .service-card button {
+        font-size: 3.7em;
+        height: max-content;
+        padding-block: 20px;
+    }
+
+    .complementary-card {
+        margin-block: 120px;
+    }
+
+    .complementary-card > p {
+        font-size: 4.7em;
+    }
+
+    .complementary-card > button {
+        font-size: 5em;
+        padding: 50px;
+    }
+
     .services > div {
         flex-direction: column;
         align-items: center;
     }
 
     .services > button {
-        padding-block: 30px; width: 85%; height: max-content;
+        padding-block: 30px; width: 85%; height: max-content; font-size: 3.2em; margin-top: 100px; font-weight: 600; padding-inline: 20px;
     }
 
     .hero h3 {
-        font-size: 1.4em;
+        font-size: 4em;
         width: 30%;
     }
 
     .book-call-button {
         width: 40%;
+        padding-block: 28px;
+        padding-inline: 25px;
         height: max-content;
+        font-size: 4em;
+        margin: 40px;
     }
 
     .three-d-house {
@@ -376,49 +417,59 @@ model-viewer {
 
     .home-section h1 {
         width: 100%;
-        font-size: 3.5em;
+        font-size: 8em;
     }
 
     .testimonial {
         flex-direction: column;
         gap: 20px;
     }
+    
+    .about-us > p {
+        font-size: 3em;
+    }
+
+    .testimonial > p {
+        font-size: 1.7em;
+    }
 
     .propchk {
         flex-direction: column;
     }
 
-    .general-contact > div > button {
-        width: fit-content;
-        font-size: x-large;
-        margin-left: 40px;
-    }
-    
-    .general-contact > div > input {
-        margin-left: 40px;
-        width: fit-content;
-        font-size: x-large;
-    }
-} 
-
-@media (max-width: 1150px) {
-    
-    .general-contact > p {
-        width: fit-content;
-        padding-right: 25px;
-    }
-
-    .general-contact {
-        flex-direction: column;
-    }
-} 
-
-@media (max-width: 995px) {
     .services-button {
         display: none;
     }
 
     .about-button {
         display: none;
+    }
+} 
+
+@media (max-aspect-ratio: 1150/835) {
+    
+    .general-contact > p {
+        width: fit-content;
+        padding-right: 25px;
+        font-size: 3em;
+    }
+
+    .general-contact > div > input {
+        width: fit-content;
+        height: max-content;
+        padding-inline: 25px;
+        font-size: 2.8em;
+    }
+
+    .general-contact > div > button {
+        width: 70%;
+        height: max-content;
+        padding-inline: 25px;
+        padding-block: 25px;
+        font-size: 3.2em;
+    }
+
+    .general-contact {
+        flex-direction: column;
     }
 } 
